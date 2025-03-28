@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@theme {
+  /* --font-sans: 'Nunito Sans', sans-serif; */
+
+  /* Base multipliers for different breakpoints */
+  --vw-multiplier: 3.5; /* Default/mobile multiplier */
+
+  /* Font size variables with default rem values converted to vw */
+  --text-xs: calc(0.75vw * var(--vw-multiplier));
+  --text-sm: calc(0.875vw * var(--vw-multiplier));
+  --text-base: calc(1vw * var(--vw-multiplier));
+  --text-lg: calc(1.125vw * var(--vw-multiplier));
+  --text-xl: calc(1.25vw * var(--vw-multiplier));
+  --text-2xl: calc(1.5vw * var(--vw-multiplier));
+  --text-3xl: calc(1.875vw * var(--vw-multiplier));
+  --text-4xl: calc(2.25vw * var(--vw-multiplier));
+  --text-5xl: calc(3vw * var(--vw-multiplier));
+  --text-6xl: calc(3.75vw * var(--vw-multiplier));
+  --text-7xl: calc(4.5vw * var(--vw-multiplier));
+  --text-8xl: calc(6vw * var(--vw-multiplier));
+  --text-9xl: calc(8vw * var(--vw-multiplier));
+
+  /* Line height variables with calculated ratios */
+  --text-xs--line-height: calc((1 / 0.75) * var(--text-xs));
+  --text-sm--line-height: calc((1.25 / 0.875) * var(--text-sm));
+  --text-base--line-height: calc((1.5 / 1) * var(--text-base));
+  --text-lg--line-height: calc((1.75 / 1.125) * var(--text-lg));
+  --text-xl--line-height: calc((1.75 / 1.25) * var(--text-xl));
+  --text-2xl--line-height: calc((2 / 1.5) * var(--text-2xl));
+  --text-3xl--line-height: calc((2.25 / 1.875) * var(--text-3xl));
+  --text-4xl--line-height: calc((2.5 / 2.25) * var(--text-4xl));
+  --text-5xl--line-height: calc(1 * var(--text-5xl));
+  --text-6xl--line-height: calc(1 * var(--text-6xl));
+  --text-7xl--line-height: calc(1 * var(--text-7xl));
+  --text-8xl--line-height: calc(1 * var(--text-8xl));
+  --text-9xl--line-height: calc(1 * var(--text-9xl));
+}
+
+/* Responsive multipliers */
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  :root {
+    --vw-multiplier: 2.4;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  :root {
+    --vw-multiplier: 2.1;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg breakpoint */
+  :root {
+    --vw-multiplier: 1.8;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl breakpoint */
+  :root {
+    --vw-multiplier: 1.5;
+  }
+}
+
+@media (min-width: 1568px) {
+  /* 2xl breakpoint */
+  :root {
+    --vw-multiplier: 1.2;
+  }
+}
+
+
+.surf__tile {
+  @apply bg-gradient-to-b from-gray-900 to-slate-950 rounded-lg p-6 h-full flex flex-col items-center justify-center;
+}
+
+
+/* Add these CSS animations in your global styles */
+/* @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.4s ease-out;
+} */
